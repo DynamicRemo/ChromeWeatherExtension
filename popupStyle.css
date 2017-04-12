@@ -1,0 +1,35 @@
+body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+#temperature{
+    font-size: 60px;
+}
+
+#temperatureScale{
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+}
+
+#lonlat{
+    font-size: 20px;
+}
+
+.humidityWindClass{
+    font-size: 15px;
+}
+
+#location{
+    font-size: 30px;
+}
+
+#mainContainer{
+    width: 400px;
+}
+
+#currentWeather{
+    text-align: center;
+}

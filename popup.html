@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Coolest Weather Extension</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="popupStyle.css">
+
+        <script type="text/javascript" src="popup.js"></script>
+    </head>
+    <body>
+        <div id="mainContainer" class="container-fluid">
+            <div id="currentWeather">
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <span id="temperature"></span>
+                        <a href="#" id="temperatureScale"></a>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <img id="icon" alt="Weather Icon"/>
+                        <div class="humidityWindClass">
+                            <span id="humidity"></span>%
+                            <img src="humidity.png" alt="Humidity Percentage" width="20px" />
+                            <span id="wind"></span>kph
+                            <img src="wind.png" alt="Wind Speed" width="20px" />
+                        </div>
+                    </div>
+                </div>
+                <div id="location"></div>
+                <div>
+                    <span id="lonlat"></span>
+                    <img src="lonlat.png" alt="Longitude and Latitude" width="25px" />
+                </div>
+            </div>
+            <!-- Future work: Because i like AccuWeather's way of next 5 days forecast -->
+            <!-- <div id="forecastWeather">
+                <div class="row">
+                    <div class="col-md-2">
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </body>
+</html>
+
