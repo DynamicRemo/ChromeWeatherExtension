@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 function fetchLonLat(){
     var showPosition = function(position){
-        document.getElementById("lonlat").innerHTML = position.coords.latitude + ", " + position.coords.longitude;
+        document.getElementById("lonlat").innerHTML = position.coords.latitude.toFixed(5) + ", " + position.coords.longitude.toFixed(5);
         updateByGeo(position.coords.latitude, position.coords.longitude);
     }
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -69,7 +69,7 @@ function sendRequest(url){
             var weather = {};
             weather.code = data.weather[0].icon;
             weather.humidity = data.main.humidity;
-            weather.wind = data.wind.speed*60*60/1000; // its in meter/sec so the convertion is to kilometer/hour
+            weather.wind = (data.wind.speed*60*60/1000).toFixed(2); // its in meter/sec so the convertion is to kilometer/hour and limit to two decimal places
             weather.location = data.name;
             weather.temp = changeCandF ? K2C(data.main.temp) : K2F(data.main.temp); 
             update(weather);
